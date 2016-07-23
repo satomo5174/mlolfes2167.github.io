@@ -1,0 +1,585 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==================
+ベースのCSSの設定
+====================*/
+/*ベースの要素の設定をリセット*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+p,article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+
+}
+
+/*HTML5の新要素をdisplay:blocにする*/
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+display:block;
+}
+
+/*画像の枠線をクリアして位置の初期値の設定*/
+img{
+border:0;
+vertical-align: top;
+}
+/*サイト全体の基本情報の設定*/
+body{
+font-size: 62.5%;
+font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+line-height:1.6;
+color:#333;
+/*background:url(images/bg01.jpg) center center / cover no-repeat fixed;*/
+}
+/*リンク時の枠の点線をなしにする*/
+a{
+outline: none;
+}
+/*リンクの装飾の設定*/
+a:link,
+a:visited,
+a:active{
+color:#fa9a4a;
+text-decoration:underline;
+}
+
+a:hover{
+color:#fa9a4a;
+text-decoration:none;
+}
+/*リスト要素の初期値をリセット*/
+ul,ol{
+list-style: none;
+}
+
+/*clearfixの設定*/
+.clearfix:after{  
+visibility:hidden;/*見えなくする*/ 
+height:0;/*見えなくする*/
+display: block;/*block要素にする*/
+font-size: 0;  
+content: " ";  
+clear: both;  
+
+}  
+* html .clearfix             { zoom: 1; } /* IE6 */  
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* video */
+video{
+    background: linear-gradient(-45deg, rgba(20,90,90,0.3), rgba(80,50,50,0.3));
+}
+video#the-video {
+	position: fixed; right: 0; bottom: 0;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto; z-index: -100;
+	background-size: cover;
+}
+
+.info{
+	background:url(images/dot.png) repeat;
+	padding-bottom:80px;
+}
+
+#slides{
+	width: 1000px;
+	height: 340px;
+	position:relative;
+	margin-top:2px;
+	top:0;
+	left:0;
+	overflow:hidden;
+	text-align:center;
+	vertical-align:middle;
+}
+.simpleSlideShow{
+	width:1000px;
+	margin: 0 auto;
+	display:block;
+}
+.slidecopy {
+	display: block;
+	width:940px;
+	min-width:1000px;
+	font-size:1.5em;
+	font-weight:10px;
+	margin:0;
+	padding:15px 10px;
+	position:relative;
+	top:-53px;
+	left: 0px;
+	z-index:1000;
+	color:#fff;
+	background-color:rgba(0,0,0,0.8);
+	box-sizing:border-box;
+}
+
+/*== ヘッダーエリアの設定 ==*/
+/*幅100%にヘッダーの帯を表示させる装飾*/
+#header{
+width:100%;
+font-size:1.1em;
+}
+
+/*ヘッダーのコンテンツ領域を940pxにしてセンター寄せに*/
+#header_top{
+width:940px;
+
+
+
+margin:0 auto;
+position:relative;
+}
+
+/*ロゴの上の余白を設定*/
+h1{
+padding-top:25px;
+}
+
+/*リード文の装飾*/
+#header_top h2{
+font-weight:normal;
+font-size:1.5em;
+margin:0 0 20px 45px;
+color:#fff;
+
+}
+
+/*rss・sitemapの設定を右に設定*/
+ul#subnav{
+text-align:right;
+position:absolute;
+top:30px;
+right:10px;
+}
+
+/*サブナビゲーションを横並びに設定*/
+ul#subnav li{
+float:left;
+padding:0 30px 0 0;
+}
+
+/*サイトマップのアイコンの設定*/
+ul#subnav a.sitemap{
+display:block;
+background:url(images/sitemap.gif) no-repeat 0 0px;
+padding:0 0 0 20px;
+min-height:11px;
+}
+
+/*RSSフィードのアイコンの設定*/
+ul#subnav a.rss{
+display:block;
+background:url(images/rss.gif) no-repeat 0 0px;
+padding:0 0 0 18px;
+min-height:11px;
+
+}
+
+/*==========================================
+グローバルナビゲーション・グラフィックの設定
+============================================*/
+/*ナビゲーションの背景を100%にして背景画像を設定*/
+#globalnav{
+width:100%;
+min-height:48px;
+background:url(images/nv_bg.gif) repeat-x;
+}
+
+/*ナビゲーションのコンテンツを幅940pxにしてセンター寄せに設定*/
+#globalnav ul{
+width:940px;
+margin:0 auto;
+overflow:hidden;
+}
+/*ナビゲーションを横並びにして背景画像を設定*/
+#globalnav li{
+float:left;
+background:url(images/line.gif) no-repeat left center;
+height:48px;
+}
+
+/*ナビゲーションのリンクボタンの装飾の設定*/
+#globalnav li a{
+/display: inline;  
+/zoom: 1;  
+color:#fff;
+display:inline-block;
+width:146px;
+height:48px;
+line-height:48px;
+padding:0 5px;
+text-align:center;
+font-size:1.4em;
+text-decoration:none;
+/*アニメーションの設定*/
+-moz-transition:0.25s linear;
+-webkit-transition:0.25s linear;
+-o-transition:0.25s linear;
+transition:0.25s linear;
+behavior: url(PIE.htc);
+
+
+}
+
+#globalnav li a:hover{
+background:#fd946b;
+}
+
+/*メイングラフィックの設定*/
+#header p img{
+display:block;
+width:940px;
+margin:0 auto;
+}
+
+/*=================
+コンテンツエリア設定
+===================*/
+/*コンテンツ内のエリアを940pxにしてセンター寄せに設定*/
+#contents{
+width:940px;
+margin:0 auto;
+font-size:1.2em;
+}
+
+/*メインコンテンツの幅を690pxにして左側に設定*/
+#contents_left{
+width:690px;
+float:left;
+margin-right:30px;
+}
+
+/*サイドエリアの幅を220pxにして右側に設定*/
+#sidebar{
+width:220px;
+float:right;
+}
+
+/*コンテンツ内のp要素の文字のサイズを設定*/
+#contents p{
+font-size:1.0em;
+}
+
+/*=================
+コンテンツ領域の枠の設定
+===================*/
+/*コンテンツ領域内の枠の設定（CSS3のボックスシャドウをPIEファイル使用）*/
+#recommend,
+#info{
+margin-top:30px;
+background:#fff;
+position:relative;
+/*ボックスシャドウ*/
+-webkit-box-shadow: #ccc 0px 2px 3px;
+-moz-box-shadow: #ccc 0px 2px 3px;
+-o-box-shadow: #ccc 0px 2px 3px;
+-ms-box-shadow: #ccc 0px 2px 3px;
+box-shadow: #ccc 0px 2px 3px;
+background: #FFFFFF;
+behavior: url(PIE.htc);
+border:1px solid #eaeaea;
+padding:0 16px 30px;
+}
+
+
+/*=========================
+Welcome To HOLLYWOOD CAFE
+===========================*/
+/*見出しの設定*/
+
+#welcome h2{
+margin-top:12px;
+border-bottom:1px solid #CCC;
+padding-bottom:6px;
+}
+
+/*領域の余白の設定*/
+#welcome{
+margin-top:45px;
+border:5px solid #e6ded6;
+background:#fff;
+padding:0 16px 6px;
+}
+
+/*画像を右寄せに設定*/
+#welcome p img{
+display:block;
+float:right;
+margin-left:8px;
+}
+
+/*文章の余白の設定*/
+#welcome p{
+font-size:110%;
+margin-top:15px;
+}
+
+
+/*=================
+RecommendMenuの設定
+===================*/
+/*見出しの余白とボーダーの設定*/
+#recommend h2,
+#info h2{
+border-bottom:2px solid #dedede;
+margin-top:24px;
+padding-bottom:6px;
+}
+
+/*メニュー名の見出しの設定*/
+#recommend .box h3{
+background:url(images/icon_01.gif) no-repeat 0 0;
+padding:0 0 0 20px;
+margin:20px 0 8px 0;
+}
+/*メニューの枠のサイズと横に並べる設定*/
+#recommend .box{
+width:317px;
+float:left;
+}
+/*商品画像の設定*/
+#recommend .box img{
+display:block;
+float:left;
+margin-right:8px;
+border:1px solid #eee;
+padding:2px;
+}
+
+/*=================
+「詳細を見る」ボタンの設定
+===================*/
+
+.box p.more a{
+position:relative;
+width:76px;
+text-align:center;
+font-size: 1.0em;
+color: #fff;
+padding: 4px 12px;
+border: 1px solid #f39a27;
+text-decoration:none;
+/*CSS3グラデーションの設定*/
+background:#ffa443;
+background: -webkit-gradient(linear, left top, left bottom, from(#ffa443), to(#ff7400));
+background: -moz-linear-gradient(top,#ffa443,#ff7400);
+background: -webkit-linear-gradient(#ffa443, #ff7400);
+background: -ms-linear-gradient(#ffa443,#ff7400);
+background: -o-linear-gradient(#ffa443,#ff7400);
+background: linear-gradient(#ffa443,#ff7400);
+-pie-background: linear-gradient(#ffa443,#ff7400);
+
+/*CSS3角丸の設定*/
+border-radius: 1px;
+-moz-border-radius: 1px;
+-webkit-border-radius: 1px;
+-ms-border-radius: 1px;
+
+
+/*CSS3ボックスシャドウの設定*/
+-moz-box-shadow:
+0px 1px 1px rgba(000,000,000,0.5),
+inset 1px 1px 1px rgba(253,202,143,1);
+-webkit-box-shadow:
+0px 1px 1px rgba(000,000,000,0.5),
+inset 1px 1px 1px rgba(253,202,143,1);
+box-shadow:
+0px 1px 1px #ccc,
+inset 1px 1px 1px #fec990;
+/*CSS3テキストシャドウの設定*/
+text-shadow:
+0px 1px 2px rgba(000,000,000,0.2);
+/*PIEファイルの設定*/
+behavior: url(PIE.htc);
+}
+
+
+.box p.more a:hover{
+position:relative;
+border:1px solid #fcb457;
+background:#ffbb76;
+/*CSS3グラデーションの設定*/
+background: -webkit-gradient(linear, left top, left bottom, from(#ffbb76), to(#fcac5d));
+background: -moz-linear-gradient(top,#ffbb76,#fcac5d);
+background: -webkit-linear-gradient(#ffbb76, #fcac5d);
+background: -ms-linear-gradient(#ffbb76,#fcac5d);
+background: -o-linear-gradient(#ffbb76,#fcac5d);
+background: linear-gradient(#ffbb76,#fcac5d);
+-pie-background: linear-gradient(#ffbb76,#fcac5d);
+
+/*CSS3ボックスシャドウの設定*/
+-moz-box-shadow:
+0px 1px 1px rgba(000,000,000,0.2),
+inset 1px 1px 1px rgba(1255,232,196,1);
+-webkit-box-shadow:
+0px 1px 1px rgba(000,000,000,0.2),
+inset 1px 1px 1px rgba(255,232,196,1);
+box-shadow:
+0px 1px 1px #ccc,
+inset 1px 1px 1px #fdca8f;
+
+/*CSS3テキストシャドウの設定*/
+text-shadow:
+0px 1px 2px rgba(000,000,000,0.2);
+/*PIEファイルの設定*/
+behavior: url(PIE.htc);
+}
+
+
+/*ボタンを右に設定*/
+.box p.more{
+text-align:right;
+}
+
+/*=================
+個別のマージン設定
+===================*/
+
+.mRight20{
+margin-right:20px !important;
+}
+
+.mTop20{
+margin-top:20px !important;
+}
+
+/*=================
+Informationの設定
+===================*/
+/*更新情報見出しの設定*/
+
+#info h3{
+background:url(images/icon_02.gif) no-repeat 0 5px;
+padding-left:14px;
+margin-top:13px;
+}
+
+/*更新日の設定*/
+#info .date{
+font-size:80%;
+padding-left:14px;
+color:#999;
+}
+
+/*更新情報本文の設定*/
+#info p{
+margin-top:5px;
+border-bottom:1px dotted #ccc;
+padding:0 0 16px 14px;
+}
+
+
+/*==================
+サイドエリアの設定
+====================*/
+/*アクセス領域の枠装飾と余白の設定*/
+#access{
+border:1px solid #a2958c;
+background:#FFFFFF;
+margin-top:45px;
+font-size:1.1em;
+width:220px;
+}
+
+/*アクセスの見出しの設定*/
+#access h2{
+background:#8e7d72;
+padding:12px 0 8px 8px;
+}
+
+/*アクセス情報項目の設定*/
+#access ul{
+padding:20px 7px 20px 13px;
+}
+
+#access li{
+margin-bottom:8px;
+}
+
+
+#access p{
+text-align:center;
+margin-bottom:8px;
+}
+/*地図の余白と外枠装飾の設定*/
+
+#access p img{
+padding:3px;
+border:1px solid #eee;
+}
+
+
+/*アイコンの設定*/
+.address{
+background:url(images/icon_03.gif) no-repeat 0 2px;
+padding-left:20px;
+
+}
+
+.tel{
+background:url(images/icon_06.gif) no-repeat 0 1px;
+padding-left:20px;
+}
+
+.time{
+background:url(images/icon_07.gif) no-repeat 0 2px;
+padding-left:20px;
+}
+
+/*おすすめ情報見出しの設定*/
+#bnr h2{
+margin:40px 0 10px;
+}
+
+/*バナーの間隔の設定*/
+#bnr li{
+margin-bottom:20px;
+}
+
+
+
+/*=============
+ページの先頭へ戻る
+===============*/
+/*ページ先頭へ戻るの位置の設定*/
+p#top{
+position:absolute;
+top:-140px;
+right:0;
+
+}
+
+/*=============
+フッターエリア
+===============*/
+/*フッターエリアの設定*/
+
+#footer{
+width:100%;
+background:url(images/bg01.jpg) no-repeat fixed;
+min-height:130px;
+font-size:1.1em;
+position:relative;
+}
+
+/*コピーライトの設定*/
+#footer p small{
+display:block;
+width:940px;
+text-align:center;
+margin:0 auto;
+margin-top:3px;
+color:#fff;
+padding-top:15px;
+text-decoration:none;
+}
+
+
+
