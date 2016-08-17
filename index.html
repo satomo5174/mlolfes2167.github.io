@@ -14,21 +14,28 @@
 <script type="application/x-javascript" src="js/jquery.slides.min.js"></script>
 <script type="text/javascript">
 $(function(){
-      $("#slides").slidesjs({
-		  play:{
-			  auto:true,
-			  effect:"fade",
-			  interval:5000,
-			  speed:1000
-			  },
-			  pagination: {
-				active: false,
-				},
-				navigation: {
-    			active: false,
-				}
-		  });
-    });
+	$("#slides").slidesjs({
+		play:{
+			auto:true,
+			effect:"fade",
+			interval:5000,
+			speed:1000
+			},
+			pagination: {
+			active: false,
+			},
+			navigation: {
+			active: false,
+			}
+	});
+	$(function() {
+			$('#top,.top').click(function() {
+			 // スクロール
+			$('html,body').animate({scrollTop: 0}, 500, 'swing');
+		});
+	});
+});
+
 </script>
 <!-- ※3．IE6～8に対応するrespond.jsを入れる。 -->
 <!--[if lt IE 9]>
@@ -36,13 +43,16 @@ $(function(){
 <script src="js/respond.js"></script>
 <![endif]-->
 
+<!-- scroll -->
+
+
 </head>
 
 <body>
 
 <!-- video -->
 <video autoplay loop id="the-video" class="video-stream html5-main-video" muted>
-<source src="movie/sample01.webm" type="video/webm"></source>
+<source src="movie/lol01.wmv" type="video/webm"></source>
 <source src="movie/lol01.mp4"></source>
 </video>
 
@@ -56,13 +66,21 @@ $(function(){
 <header id="header_top">
 
 <hgroup>
-<h1><img src="images/logo01-1.png" width="379" height="149" alt="HOLLYWOOD CAFE"></h1>
+<h1><a href="index.html"><img src="images/logo01-1.png" width="379" height="149" alt="LEAGUE LEGENDS SUMMER FESTIVAL 2016"></a></h1>
 <h2>LOLプレイヤー必見！真夏のLOL祭り！！</h2>
 </hgroup>
 
 <ul id="subnav" class="clearfix">
-<li><a href="#" class="sitemap">test</a></li>
-<li><a href="#" class="rss">test</a></li>
+<!--
+<li><a href="#" class="sitemap">サイトマップ</a></li>
+<li><a href="#" class="rss">RSS</a></li>
+-->
+<form role="search" method="get" class="search-form" action="<?php esc_url(/); ?>">
+	<label>
+		<input type="search" class="search-field" placeholder="検索 &hellip;" value="" name="s" title="検索:" />
+	</label>
+	<input type="submit" class="search-submit" value="検索" />
+</form>
 </ul>
 </header>
 <!--/header_top -->
@@ -70,30 +88,28 @@ $(function(){
 <!--globalnav -->
 <nav id="globalnav" class="clearfix">
 <ul> 
-<li><a href="#">HOME</a></li>
-<li><a href="#">ABOUT</a></li>
-<li><a href="#">EVENT</a></li>
-<li><a href="#"> LOL MEMBER</a></li>
+<li><a href="index.html">HOME</a></li>
+<li><a href="ABOUT/index.html">ABOUT</a></li>
+<li><a href="GUEST/index.html"> GUEST</a></li>
 <li><a href="#">STAFF</a></li>
-<li><a href="#">CONTACT</a></li>
 </ul>
 </nav>
 <!--/globalnav -->
 
 <div class="simpleSlideShow">
 		<div id="slides">
-            <img src="images/bg03.jpg" alt="1jpg" width="1000px" height="370px">
-            <img src="images/bg04.jpg" alt="2jpg" width="1000px" height="370px">
-            <img src="images/bg05.jpg" alt="3jpg" width="1000px" height="370px">
-            <img src="images/bg06.jpg" alt="4jpg" width="1000px" height="370px">
-            <img src="images/bg07.jpg" alt="5jpg" width="1000px" height="370px">
-            <img src="images/bg08.jpg" alt="5jpg" width="1000px" height="370px">
-            <img src="images/bg09.jpg" alt="5jpg" width="1000px" height="370px">
-            <img src="images/bg10.jpg" alt="5jpg" width="1000px" height="370px">
-            <img src="images/bg11.jpg" alt="5jpg" width="1000px" height="370px">
+            <img src="images/bg03.jpg" alt="1jpg" width="940px" height="390px">
+            <img src="images/bg04.jpg" alt="2jpg" width="940px" height="390px">
+            <img src="images/bg05.jpg" alt="3jpg" width="940px" height="390px">
+            <img src="images/bg06.jpg" alt="4jpg" width="940px" height="390px">
+            <img src="images/bg07.jpg" alt="5jpg" width="940px" height="390px">
+            <img src="images/bg08.jpg" alt="5jpg" width="940px" height="390px">
+            <img src="images/bg09.jpg" alt="5jpg" width="940px" height="390px">
+            <img src="images/bg10.jpg" alt="5jpg" width="940px" height="390px">
+            <img src="images/bg11.jpg" alt="5jpg" width="940px" height="390px">
 		</div>
         <div class="slidecopy">
-    <p>第１回！真夏のLOLイベント2016開催！！</p>
+    <p>第１回！LOLイベント2016！！</p>
   </div>
   </div>
 
@@ -109,32 +125,34 @@ $(function(){
 <!--welcome -->
 <section id="welcome" class="clearfix">
 <h2><img src="images/ttl_welcome.jpg" width="362" height="28" alt="Welcome To LOL FESTIVAL 2016"></h2>
-<p><img src="images/test03.jpg" width="169" height="115" alt="">この度、第１回真夏のLOLのイベントを開催いたします！LOLをプレイしている方々と楽目ればと思います！</p>
-<p></p>
+<p><img src="images/welcome01.jpg" width="169" height="115" alt="">第１回真夏のLOLイベントを開催いたします！LOLをプレイしている方は是非ご参加下さい！<br>
+イベントは8/28日13時から開催予定です。</p>
 </section>
 <!--/welcome -->
 
 
 <!--recommend -->
 <section id="recommend">
-<h2><img src="images/event01.jpg" width="168" height="14" alt="RecommendMenu"></h2>
+<h2><img src="images/event01.jpg" width="132" height="10" alt="RecommendMenu"></h2>
 
 <!--menu -->
 <div id="menu" class="clearfix">
 
 <!--box -->
 <section class="box mRight20">
-<h3>1DAY</h3>
-<p class="clearfix"><img src="images/test03.jpg" width="159" height="103" alt="">いつもとは違ったプレイで楽める！新しい遊びを是非！</p>
-<p class="more"><a href="#">詳細を見る</a></p>
+<h3>FIRST HALF (前半)</h3>
+<p class="clearfix"><a href="ABOUT/index.html"><img src="images/event02-2.jpg" width="159" height="103" alt=""></a>いつもとは違ったプレイができる！景品アリ！<br>
+13時~</p>
+<!--<p class="more"><a href="ABOUT/index.html">詳細を見る</a></p>-->
 </section>
 <!--/box -->
 
 <!--box -->
 <section class="box">
-<h3>2DAY</h3>
-<p class="clearfix"><img src="images/test03.jpg" width="159" height="103" alt="">ソロやチームで存分に楽しめるイベントを用意！景品もあります！</p>
-<p class="more"><a href="#">詳細を見る</a></p>
+<h3>LATTER HALF (後半)</h3>
+<p class="clearfix"><a href="ABOUT/index.html"><img src="images/event03.jpg" width="159" height="103" alt=""></a>1on1形式でのトーナメント戦！こちらも景品アリ！<br>
+18時～</p>
+<p class="more"><a href="ABOUT/index.html">詳細を見る</a></p>
 </section>
 <!--/box -->
 
@@ -146,30 +164,30 @@ $(function(){
 
 <!--info -->
 <section id="info">
-<h2><img src="images/news01.jpg" width="170" height="14" alt="Information"></h2>
+<h2><img src="images/news01.jpg" width="120" height="10" alt="Information"></h2>
 
 <article>
 <header>
-<h3 class="mTop20">２日目のイベント内容を追加しました</h3>
-<time datetime="2016-07-20" class="date">2016.07.20</time>
+<h3 class="mTop20">イベント内容を追加しました。</h3>
+<time datetime="2016-07-20" class="date">2016.08.20</time>
 </header>
-<p><a href="#">ソロやチームで真剣勝負！プレゼントも</a></p>
+<p><a href="ABOUT/index.html">イベント内容はこちらから！景品もあります！</a></p>
 </article>
 
 <article>
 <header>
-<h3>１日目のイベント内容を追加しました</h3>
-<time datetime="2016-07-19" class="date">2016.07.19</time>
+<h3>宣伝用動画をアップしました。</h3>
+<time datetime="2016-08-05" class="date">2016.08.05</time>
 </header>
-<p><a href="#">今までとはすこし違った面白いイベントを多数ご紹介いたします！</a></p>
+<p><a href="http://www.nicovideo.jp/watch/1470347109?side_bar=0" target="_blank">イベント用の動画をアップしました。</a></p>
 </article>
 
 <article>
 <header>
-<h3>初イベント開催いたします！</h3>
-<time datetime="2016-07-18" class="date">2016.07.18</time>
+<h3>初イベント開催いたします。</h3>
+<time datetime="2016-08-01" class="date">2016.08.01</time>
 </header>
-<p><a href="#">詳しい内容はこちらで！</a></p>
+<p class="top"><a href="#header">サイトをアップしました。</a></p>
 </article>
 
 </section>
@@ -186,12 +204,12 @@ $(function(){
 <h2><img src="images/ttl_access.png" width="65" height="14" alt="access"></h2>
 
 <ul>
-<li class="address">ニコ生・Twitch<br /></li>
-<li class="tel">mail.address.000@gmail</li>
+<li class="address">ニコ生・Twitchなど<br /></li>
+<li class="tel">lol.event.mo5174@gmail</li>
 <li class="time">@UK207</li>
 </ul>
 
-<p><img src="images/test05.jpg" width="195" height="143" alt="LOLの地図"></p>
+<p><img src="images/m01.jpg" width="195" height="143" alt="my pic"></p>
 
 </section>
 <!--/access -->

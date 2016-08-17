@@ -35,7 +35,6 @@ font-size: 62.5%;
 font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 line-height:1.6;
 color:#333;
-/*background:url(images/bg01.jpg) center center / cover no-repeat fixed;*/
 }
 /*リンク時の枠の点線をなしにする*/
 a{
@@ -83,7 +82,7 @@ video#the-video {
 }
 
 .info{
-	background:url(images/dot.png) repeat;
+	background:url(../images/dot.png) repeat;
 	padding-bottom:80px;
 }
 
@@ -186,7 +185,7 @@ min-height:11px;
 #globalnav{
 width:100%;
 min-height:48px;
-background:url(images/nv_bg.gif) repeat-x;
+background:url(../images/nv_bg.gif) repeat-x;
 }
 
 /*ナビゲーションのコンテンツを幅940pxにしてセンター寄せに設定*/
@@ -198,14 +197,18 @@ overflow:hidden;
 /*ナビゲーションを横並びにして背景画像を設定*/
 #globalnav li{
 float:left;
-background:url(images/line.gif) no-repeat left center;
+background:url(../images/line.gif) no-repeat left center;
 height:48px;
+}
+
+#globalnav li .active02{
+	background-color:#fd946b;
 }
 
 /*ナビゲーションのリンクボタンの装飾の設定*/
 #globalnav li a{
-/display: inline;  
-/zoom: 1;  
+/*display: inline;  
+zoom: 1;  */
 color:#fff;
 display:inline-block;
 width:225px;
@@ -221,6 +224,10 @@ text-decoration:none;
 -o-transition:0.25s linear;
 transition:0.25s linear;
 behavior: url(PIE.htc);
+}
+
+#globalnav li .active02:hover{
+background:#f97441;
 }
 
 #globalnav li a:hover{
@@ -246,7 +253,7 @@ font-size:1.2em;
 
 /*メインコンテンツの幅を690pxにして左側に設定*/
 #contents_left{
-width:690px;
+width:940px;
 float:left;
 margin-right:30px;
 }
@@ -277,7 +284,7 @@ position:relative;
 -o-box-shadow: #ccc 0px 2px 3px;
 -ms-box-shadow: #ccc 0px 2px 3px;
 box-shadow: #ccc 0px 2px 3px;
-background: #FFFFFF;
+background: #fcfcfc;
 behavior: url(PIE.htc);
 border:1px solid #eaeaea;
 padding:0 16px 30px;
@@ -297,9 +304,12 @@ padding-bottom:6px;
 
 /*領域の余白の設定*/
 #welcome{
-margin-top:15px;
+margin-top:45px;
 border:5px solid #e6ded6;
-background:#fff;
+background:url(../images/back01.jpg);
+filter:alpha(opacity=90);
+-moz-opacity:0.9;
+opacity:0.98;
 padding:0 16px 6px;
 }
 
@@ -330,14 +340,15 @@ padding-bottom:6px;
 
 /*メニュー名の見出しの設定*/
 #recommend .box h3{
-background:url(images/icon_01.gif) no-repeat 0 0;
-padding:0 0 0 20px;
+background:url(../images/icon_01.gif) no-repeat 0 0;
+padding:0 0 0 22px;
 margin:20px 0 8px 0;
 }
 /*メニューの枠のサイズと横に並べる設定*/
 #recommend .box{
 width:317px;
 float:left;
+padding: 0 0 0 75px;
 }
 /*商品画像の設定*/
 #recommend .box img{
@@ -478,7 +489,7 @@ padding:0 0 16px 14px;
 #access{
 border:1px solid #a2958c;
 background:#FFFFFF;
-margin-top:15px;
+margin-top:45px;
 font-size:1.1em;
 width:220px;
 }
@@ -558,7 +569,7 @@ right:0;
 
 #footer{
 width:100%;
-background:url(images/bg01.jpg) no-repeat fixed;
+background:url(../images/bg01.jpg) no-repeat fixed;
 min-height:130px;
 font-size:1.1em;
 position:relative;

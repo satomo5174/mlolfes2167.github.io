@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/*メディアクエリの指定（※widthが640px以下の場合に{}内のCSSを適用する）*/
+@media screen and (max-width: 640px) {
+
+
+
+/*=====================
+ヘッダーエリアの設定
+=======================*/
+/*ヘッダーのコンテンツ領域を100%に設定*/
+#header_top{
+width:100%;
+margin:0 auto;
+position:relative;
+}
+
+/*ヘッダーのコンテンツ領域のフロート解除(rssとsitemapの領域確保)*/
+#header_top:after{
+visibility:hidden;
+height:0;
+display:block;
+font-size:0;
+content: " ";
+clear: both;
+}  
+
+/*ロゴの余白設定*/
+#header_top h1{
+padding:10px;
+}
+
+/*リード文の設定*/
+#header_top h2{
+font-size:12px;
+margin:0 0 20px 10px;
+}
+
+/*rss・sitemapを右に設定*/
+ul#subnav{
+float:right;
+position:static;
+margin:0 0 20px 60px;
+}
+
+
+/*=====================
+グローバルナビゲーションの設定
+=======================*/
+/*ナビゲーションの帯の背景画像を表示しない*/
+#globalnav{
+background:none;
+}
+
+/*ナビゲーションの領域を100%に設定*/
+#globalnav ul{
+width:100%;
+}
+
+/*ナビゲーションの背景画像とサイズの設定*/
+#globalnav ul li{
+width:33.3%;background:url(images/nv_bg.gif) repeat-x;
+}
+
+/*ナビゲーションのリンクボタンの装飾の設定*/
+#globalnav li a{
+background:url(images/line.gif) no-repeat left center;
+display:block;
+width:100%;
+text-align:center;
+}
+
+
+/*==================
+画像サイズの設定
+====================*/
+/*画像のサイズを100%にする*/
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;　/*IE8のみ適用*/
+}
+
+
+
+/*=================
+コンテンツエリア設定
+===================*/
+/*コンテンツ領域の背景設定*/
+#contents{
+width:100%;
+}
+
+
+/*メインコンテンツをフロートさせない*/
+#contents_left{
+width:100%;
+float:none;
+}
+
+/*サイドエリアをフロートさせない*/
+#sidebar{
+width:100%;
+float:none;
+}
+
+/*WelcomeとRecommendMenuとInformationの余白設定*/
+#welcome,
+#recommend,
+#info{
+margin:15px 10px;
+}
+
+/*メニューの枠のサイズを100%に設定*/
+#recommend .box{ 
+width:100%;
+}
+
+/*アクセス領域の余白の設定*/
+#access{ 
+width:90%; 
+margin:20px auto;
+}
+
+/*アクセス情報項目の設定*/
+#access ul{ 
+padding-bottom:0;
+}
+
+#access p{ 
+padding-bottom:10px;
+}
+
+/*バナーを中央に設定*/
+#bnr{ 
+text-align:center;
+}
+
+/*=============
+ページの先頭へ戻る
+===============*/
+/*ページ先頭へ戻るの位置の設定*/
+p#top{
+position:absolute;
+top:10px;
+right:0;
+}
+
+
+/*=============
+フッターエリア
+===============*/
+/*コピーライトの設定*/
+#footer p small{
+width:200px;
+font-size:10px;
+}
+
+
+
+
+}

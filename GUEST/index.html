@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- ※1．ウィンドウサイズをデバイスの幅に揃え、スマートフォンで見た際に縮小拡大はできないようにする。表示倍率の最大値を設定する。 -->
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
+<title>真夏のLOLフェスティバル2016</title>
+<link rel="stylesheet" href="layout.css">
+<!-- ※2．メディアクエリの設定の入ったCSSを読み込む。 -->
+<link rel="stylesheet" href="response.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="../js/fullscreen.js"></script>
+<script type="application/x-javascript" src="../js/jquery.slides.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#slides").slidesjs({
+		play:{
+			auto:true,
+			effect:"fade",
+			interval:5000,
+			speed:1000
+			},
+			pagination: {
+			active: false,
+			},
+			navigation: {
+			active: false,
+			}
+	});
+	$(function() {
+			$('#top,.top').click(function() {
+			 // スクロール
+			$('html,body').animate({scrollTop: 0}, 500, 'swing');
+		});
+	});
+});
+
+</script>
+<!-- ※3．IE6～8に対応するrespond.jsを入れる。 -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/respond.js"></script>
+<![endif]-->
+
+<!-- scroll -->
+
+
+</head>
+
+<body>
+
+<!-- video -->
+<video autoplay loop id="the-video" class="video-stream html5-main-video" muted>
+<source src="../movie/lol01.wmv" type="video/webm"></source>
+<source src="../movie/lol01.mp4"></source>
+</video>
+
+<!-- info -->
+<div class="info"> 
+
+<!--header -->
+<div id="header">
+
+<!--header_top -->
+<header id="header_top">
+
+<hgroup>
+<h1><a href="index.html"><img src="../images/logo01-1.png" width="379" height="149" alt="LEAGUE LEGENDS SUMMER FESTIVAL 2016"></a></h1>
+<h2>LOLプレイヤー必見！真夏のLOL祭り！！</h2>
+</hgroup>
+
+<ul id="subnav" class="clearfix">
+<!--
+<li><a href="#" class="sitemap">サイトマップ</a></li>
+<li><a href="#" class="rss">RSS</a></li>
+-->
+<form role="search" method="get" class="search-form" action="<?php esc_url(/); ?>">
+	<label>
+		<input type="search" class="search-field" placeholder="検索 &hellip;" value="" name="s" title="検索:" />
+	</label>
+	<input type="submit" class="search-submit" value="検索" />
+</form>
+</ul>
+</header>
+<!--/header_top -->
+
+<!--globalnav -->
+<nav id="globalnav" class="clearfix">
+<ul> 
+<li><a href="../index.html" class="active">HOME</a></li>
+<li><a href="../ABOUT/index.html" class="active02">ABOUT</a></li>
+<li><a href="#" class="active03"> GUEST</a></li>
+<li><a href="#" class="active04">STAFF</a></li>
+</ul>
+</nav>
+<!--/globalnav -->
+</div>
+<!--header -->
+
+
+<!--contents -->
+<div id="contents" class="clearfix">
+<!--contents_left -->
+<div id="contents_left">
+
+<!--welcome -->
+<section id="welcome" class="clearfix">
+<h2><img src="../images/ttl_guest.jpg" width="362" height="28" alt="Welcome To LOL FESTIVAL 2016"></h2>
+<!--<p><img src="../images/welcome01.jpg" width="300" height="110" alt=""> -->
+<br>
+・参加者の紹介欄です。
+決まり次第こちらにて更新予定です。<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</section>
+<!--/welcome -->
+
+</div>
+<!--/contents_left -->
+
+<!--/sidebar -->
+</div>
+</div>
+<!--/contents -->
+
+<!--footer -->
+<footer id="footer">
+<p id="top"><a href="#header"><img src="../images/btn_pagetop.png" width="39" height="114" alt="ページの先頭へ戻る"></a></p>
+<p><small>Copyright &copy; 真夏のLOLフェスティバル2016 AllRight Reserved.</small></p>
+</footer>
+<!--/footer -->
+
+</body>
+</html>
+
