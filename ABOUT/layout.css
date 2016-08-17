@@ -306,11 +306,26 @@ padding-bottom:6px;
 #welcome{
 margin-top:45px;
 border:5px solid #e6ded6;
-background:url(../images/back01.jpg);
+background:url(../images/back01.jpg) no-repeat;
+background-color:#FCFCFC;
 filter:alpha(opacity=90);
 -moz-opacity:0.9;
 opacity:0.98;
 padding:0 16px 6px;
+}
+
+.welcome{
+margin-top:45px;
+border:5px solid #e6ded6;
+background-color:#FDFDFD;
+filter:alpha(opacity=90);
+-moz-opacity:0.9;
+opacity:0.99;
+padding:0 16px 6px;
+}
+
+.welcome h4{
+	padding-bottom:-50px;
 }
 
 /*画像を右寄せに設定*/
