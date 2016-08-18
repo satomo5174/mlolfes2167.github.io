@@ -348,6 +348,19 @@ border:1px solid #eee;
 padding:2px;
 }
 
+.box img:hover{
+	opacity: 0.7;
+	filter: alpha(opacity=60);
+	transition: 0.4s ;
+}
+
+#bnr li img:hover{
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-ms-filter: “alpha( opacity=60 )”;
+	transition: 0.4s ;
+}
+
 /*=================
 「詳細を見る」ボタンの設定
 ===================*/
