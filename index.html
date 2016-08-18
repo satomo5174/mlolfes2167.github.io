@@ -9,6 +9,9 @@
 <!-- ※2．メディアクエリの設定の入ったCSSを読み込む。 -->
 <link rel="stylesheet" href="response.css">
 
+<!-- hint -->
+<link rel="stylesheet" href="hint.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="js/fullscreen.js"></script>
 <script type="application/x-javascript" src="js/jquery.slides.min.js"></script>
@@ -141,7 +144,7 @@ $(function(){
 <!--box -->
 <section class="box mRight20">
 <h3>FIRST HALF (前半)</h3>
-<p class="clearfix"><a href="ABOUT/index.html"><img src="images/event02-2.jpg" width="159" height="103" alt=""></a>いつもとは違ったプレイができる！景品アリ！<br>
+<p class="clearfix"><a href="ABOUT/index.html"><img src="images/event02-2.jpg" width="159" height="103" alt="first"></a>いつもとは違ったプレイができる！景品アリ！<br>
 13時~</p>
 <!--<p class="more"><a href="ABOUT/index.html">詳細を見る</a></p>-->
 </section>
@@ -152,7 +155,7 @@ $(function(){
 <h3>LATTER HALF (後半)</h3>
 <p class="clearfix"><a href="ABOUT/index.html"><img src="images/event03.jpg" width="159" height="103" alt=""></a>1on1形式でのトーナメント戦！こちらも景品アリ！<br>
 20時～</p>
-<p class="more"><a href="ABOUT/index.html">詳細を見る</a></p>
+<p class="more"><a href="ABOUT/index.html"  class="hint--top" data-hint="イベント内容はこちら">詳細を見る</a></p>
 </section>
 <!--/box -->
 
@@ -217,8 +220,8 @@ $(function(){
 <aside id="bnr">
 <h2><img src="images/ttl_info.png" width="92" height="15" alt="おすすめ情報"></h2>
 <ul>
-<li><a href="http://com.nicovideo.jp/community/co3104846" target="_blank"><img src="images/test012.jpg" width="220" height="87" alt="test"></a></li>
-<li><a href="https://www.twitch.tv/kjlg/profile" target="_blank"><img src="images/test02.jpg" width="220" height="87" alt="twitter"></a></li>
+<li><a href="http://com.nicovideo.jp/community/co3104846" target="_blank" class="hint--top" data-hint="ニコ生"><img src="images/test012.jpg" width="220" height="87" alt="test"></a></li>
+<li><a href="https://www.twitch.tv/kjlg/profile" target="_blank" class="hint--top" data-hint="twitch"><img src="images/test02.jpg" width="220" height="87" alt="twitter"></a></li>
 </ul>
 </aside>
 
