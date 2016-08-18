@@ -342,6 +342,12 @@ background:url(../images/icon_08.gif) no-repeat 0 0;
 padding:0 0 0 20px;
 margin:20px 0 8px 0;
 }
+
+#recommend .box .hRight20{
+	background:url(../images/icon_08.gif) no-repeat 22px 0;
+	padding-left:43px;
+}
+
 /*メニューの枠のサイズと横に並べる設定*/
 #recommend .box{
 width:317px;
