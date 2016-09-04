@@ -241,6 +241,40 @@ width:940px;
 margin:0 auto;
 }
 
+.words {
+  color: #FFDF5A;
+  font-size: 0;
+  line-height: 0.9;
+  text-align:center;
+}
+.words span {
+  font-size: 120px;
+  display: inline-block;
+  animation: move 2s ease-in-out infinite;
+}
+.words span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.words span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.words span:nth-child(4) {
+  animation-delay: 1.3s;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-25%, 0);
+  }
+  50% {
+    text-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    transform: translate(33%, 0);
+  }
+}
+
+
 /*=================
 コンテンツエリア設定
 ===================*/
@@ -290,6 +324,20 @@ border:1px solid #eaeaea;
 padding:0 16px 30px;
 }
 
+.box{
+	font-size:25px;
+	margin:135px 0 0 310px;
+}
+.box h3{
+	padding-top:18px;
+}
+.box02 img{
+	font-size:25px;
+	margin-top:150px;
+}
+.box03 img{
+	margin:30px 0;
+}
 
 /*=========================
 Welcome To MLOLFESTIVAL2016
@@ -306,7 +354,7 @@ padding-bottom:6px;
 #welcome{
 margin-top:45px;
 border:5px solid #e6ded6;
-background:url(../images/back01.jpg);
+background:#fff;
 filter:alpha(opacity=90);
 -moz-opacity:0.9;
 opacity:0.98;

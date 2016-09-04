@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="layout.css">
 <!-- ※2．メディアクエリの設定の入ったCSSを読み込む。 -->
 <link rel="stylesheet" href="response.css">
+<link rel="stylesheet" type="text/css" href="component.css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="../js/fullscreen.js"></script>
@@ -109,32 +110,88 @@ $(function(){
 <h2><img src="../images/ttl_guest.jpg" width="362" height="28" alt="Welcome To LOL FESTIVAL 2016"></h2>
 <!--<p><img src="../images/welcome01.jpg" width="300" height="110" alt=""> -->
 <br>
-・参加者の紹介欄です。
-決まり次第こちらにて更新予定です。<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+<div class="words words-1">
+  <span>T</span>
+  <span>H</span>
+  <span>A</span>
+  <span>N</span>
+  <span>K</span>
+  <span>S</span>
+</div>
+<div class="words words-1">
+  <span>F</span>
+  <span>O</span>
+  <span>R</span>
+</div>
+<div class="words words-1">
+  <span>J</span>
+  <span>O</span>
+  <span>I</span>
+  <span>N</span>
+  <span>I</span>
+  <span>N</span>
+  <span>G</span>
+</div>
+
+<div class="container">	
+			<!-- Codrops top bar -->
+			<div class="os-phrases" id="os-phrases">
+				<h4>参加者紹介</h4>
+				<h4>参加者紹介</h4>
+                <h4>参加者紹介</h4>
+				<h4>参加者紹介</h4>
+                <h4>参加者紹介</h4>
+				<h4>参加者紹介</h4>
+                <h4>参加者紹介</h4>
+				<h4>参加者紹介</h4>
+			</div>
+
+    <section class="box">
+        <h3>no1. kakkunn01さん</h3>
+        <h3>no2. mepurun x3さん</h3>
+        <h3>no3. SKT T114514 Noobさん</h3>
+        <h3>no4. Guusukaさん</h3>
+        <h3>no5. ボリスさん</h3>
+        <h3>no6. TheRealForceさん</h3>
+        <h3>no7. にゃあにゃうんさん</h3>
+        <h3>no8. Deflareさん</h3>
+        <h3>no9. KyuBeeさん</h3>
+        <h3>no10. でこぴんさん</h3>
+        <h3>no11. わをんさん</h3>
+        <h3>no12. Akatsuki16さん</h3>
+        <h3>no13. erekuroさん</h3>
+        <h3>no14. SugiMamuさん</h3>
+        <h3>no15. volさん</h3>
+    </section>
+
+		<div class="os-phrases tx02" id="os-phrases02">
+				<h4>1on1 結果内容</h4>
+				<h4>1on1 結果内容</h4>
+                <h4>1on1 結果内容</h4>
+				<h4>1on1 結果内容</h4>
+                <h4>1on1 結果内容</h4>
+				<h4>1on1 結果内容</h4>
+                <h4>1on1 結果内容</h4>
+				<h4>1on1 結果内容</h4>
+			</div>
+            
+<p class="box02"><img src="../images/tm01.jpg" alt="">
+</p>
+<p class="box03"><img src="../images/gift.jpg" alt="">
+</p>
+
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="jquery.lettering.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#os-phrases > h4").lettering('words').children("span").lettering().children("span").lettering(); 
+			})
+			$(document).ready(function() {
+				$("#os-phrases02 > h4").lettering('words').children("span").lettering().children("span").lettering(); 
+			})
+		</script>
 
 </section>
 <!--/welcome -->
